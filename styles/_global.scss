@@ -1,0 +1,116 @@
+//Global variables
+
+$primary-color: #f2f5ea;
+$secondary-color: #bbc7a4;
+$h1-color: #e75a7c;
+$h2-color: #e75a7c;
+$default-color: black;
+$course-sellout-color: white;
+$h1-font: 4.2rem;
+$h2-font: 3.6rem;
+$search-here-font: 4.2rem;
+$veganburger-font: 2.6rem;
+$navlinks-font: 2rem;
+$paragraph-font: 1.8rem;
+$footer-font: 1.6rem;
+$bold-weight: 700;
+$box-shadow: 0rem 0.4rem 0.4rem 0rem
+  rgba(
+    $color: #000000,
+    $alpha: 0.25,
+  );
+$text-shadow: 0rem 0.4rem 0.4rem
+  rgba(
+    $color: #000000,
+    $alpha: 0.25,
+  );
+
+//Global functions
+
+@mixin flex($align, $justify, $direction) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+//Global styling
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  color: $default-color;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto";
+  background: $primary-color;
+}
+
+h1 {
+  font-size: $h1-font;
+  color: $h1-color;
+  font-weight: $bold-weight;
+}
+
+h2 {
+  font-size: $h2-font;
+  color: $h2-color;
+  font-weight: $bold-weight;
+}
+
+p {
+  font-size: $paragraph-font;
+}
+
+.nav-wrapper {
+  min-height: 8vh;
+  background: $secondary-color;
+  box-shadow: $box-shadow;
+  position: relative;
+  @include flex(center, normal, column);
+  nav {
+    width: 80%;
+    margin: auto;
+    @include flex(center, space-between, row);
+    ul {
+      width: 40rem;
+      @include flex(center, space-between, row);
+      li {
+        a {
+          font-size: $navlinks-font;
+          font-weight: $bold-weight;
+        }
+      }
+    }
+  }
+}
+
+section.hero {
+  .hero-img {
+    height: 46rem;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+footer {
+  min-height: 10vh;
+  background: $secondary-color;
+  @include flex(center, center, column);
+  text-align: center;
+  p {
+    margin: 0 5.6rem;
+    font-size: $footer-font;
+  }
+}

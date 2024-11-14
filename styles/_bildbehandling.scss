@@ -1,0 +1,26 @@
+section.bildbehandling {
+  min-height: 120vh;
+  text-align: center;
+  h1 {
+    margin: 7rem 0 7rem 0;
+  }
+  .content {
+    min-height: inherit;
+    @include flex(center, normal, column);
+    gap: 10rem;
+    .info-img-container {
+      @include flex(normal, normal, column);
+      gap: 5rem;
+      .img-container {
+        @include flex(center, center, row);
+        gap: 10rem;
+        .img-wrapper {
+          width: 55rem;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
