@@ -70,29 +70,6 @@ p {
   font-size: $paragraph-font;
 }
 
-.nav-wrapper {
-  min-height: 8vh;
-  background: $secondary-color;
-  box-shadow: $box-shadow;
-  position: relative;
-  @include flex(center, normal, column);
-  nav {
-    width: 80%;
-    margin: auto;
-    @include flex(center, space-between, row);
-    ul {
-      width: 40rem;
-      @include flex(center, space-between, row);
-      li {
-        a {
-          font-size: $navlinks-font;
-          font-weight: $bold-weight;
-        }
-      }
-    }
-  }
-}
-
 section.hero {
   .hero-img {
     height: 46rem;

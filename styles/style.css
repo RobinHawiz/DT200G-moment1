@@ -32,36 +32,6 @@ p {
   font-size: 1.8rem;
 }
 
-.nav-wrapper {
-  min-height: 8vh;
-  background: #bbc7a4;
-  box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: normal;
-  flex-direction: column;
-}
-.nav-wrapper nav {
-  width: 80%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-}
-.nav-wrapper nav ul {
-  width: 40rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-}
-.nav-wrapper nav ul li a {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
 section.hero .hero-img {
   height: 46rem;
 }
@@ -84,6 +54,121 @@ footer {
 footer p {
   margin: 0 5.6rem;
   font-size: 1.6rem;
+}
+
+.nav-wrapper {
+  min-height: 8vh;
+  background: #bbc7a4;
+  box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: column;
+}
+.nav-wrapper nav {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.nav-wrapper nav .veganburger {
+  padding: 1rem 1rem;
+  border: solid 0.1rem black;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  display: none;
+}
+.nav-wrapper nav .veganburger .line-container {
+  height: 2rem;
+  width: 2.4rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: normal;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.nav-wrapper nav .veganburger .line-container .line {
+  display: block;
+  width: 100%;
+  height: 0.3rem;
+  background: black;
+}
+.nav-wrapper nav .veganburger p {
+  font-size: 2.6rem;
+}
+.nav-wrapper nav .nav-links {
+  width: 40rem;
+}
+.nav-wrapper nav .nav-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.nav-wrapper nav .nav-links ul li a {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 83.4rem) {
+  .nav-wrapper nav .veganburger {
+    display: flex;
+    cursor: pointer;
+  }
+  .nav-wrapper nav .nav-links {
+    height: 100vh;
+    width: 34rem;
+    top: 0;
+    right: 0;
+    position: fixed;
+    background: #bbc7a4;
+    box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: normal;
+    justify-content: normal;
+    flex-direction: column;
+    z-index: 1;
+    display: none;
+  }
+  .nav-wrapper nav .nav-links .veganburger {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    align-self: flex-start;
+  }
+  .nav-wrapper nav .nav-links ul {
+    margin-top: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
+.nav-wrapper nav .toggle-nav-links {
+  display: flex;
+}
+
+.nav-wrapper nav .veganburger .line-container {
+  position: relative;
+}
+.nav-wrapper nav .veganburger .line-container .toggle-line:nth-of-type(1) {
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%) rotate(45deg);
+}
+.nav-wrapper nav .veganburger .line-container .toggle-line:nth-of-type(2) {
+  width: 0;
+}
+.nav-wrapper nav .veganburger .line-container .toggle-line:nth-of-type(3) {
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%) rotate(-45deg);
 }
 
 section.latest-products {
