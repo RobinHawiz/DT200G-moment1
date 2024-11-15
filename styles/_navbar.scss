@@ -47,9 +47,9 @@
   }
 }
 
-// Navbar styling for tablets
+// Styling for tablets
 
-@media screen and (max-width: 83.4rem) {
+@media screen and (max-width: 834px) {
   .nav-wrapper {
     nav {
       .veganburger {
@@ -76,6 +76,20 @@
           margin-top: 7rem;
           @include flex(center, normal, column);
           gap: 5rem;
+        }
+      }
+    }
+  }
+}
+
+// Styling for mobile
+
+@media screen and (max-width: 695px) {
+  .nav-wrapper {
+    nav {
+      .veganburger {
+        p {
+          font-size: calc($veganburger-font - 0.4rem);
         }
       }
     }

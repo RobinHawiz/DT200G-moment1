@@ -3,16 +3,18 @@ section.latest-products {
   min-height: 69.2vh;
   width: 80%;
   margin: auto;
-  h1 {
-    margin: 7rem 0 7rem 0;
-  }
+
   .products-container {
     width: 100%;
-    @include flex(center, space-between, row);
-    img {
+    @include flex(center, center, row);
+    gap: 5vw;
+    .img-wrapper {
       height: 50rem;
-      width: 30rem;
-      object-fit: cover;
+      img {
+        width: 25rem;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 }
@@ -27,9 +29,11 @@ section.course-sellout {
   h1 {
     color: $course-sellout-color;
     line-height: 7rem;
+    margin: 0;
     margin-bottom: 3.2rem;
     text-align: center;
     text-shadow: $text-shadow;
+    hyphens: manual;
   }
 
   a.search-here {
@@ -53,5 +57,47 @@ section.ads {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+// Styling for tablets
+
+@media screen and (max-width: 834px) {
+  section.latest-products {
+    .products-container {
+      gap: 0;
+      .img-wrapper {
+        height: 45rem;
+        img {
+          width: 23rem;
+        }
+      }
+    }
+  }
+}
+
+// Styling for mobile
+
+@media screen and (max-width: 695px) {
+  section.latest-products {
+    h1 {
+      margin-bottom: 0;
+    }
+    .products-container {
+      width: 75%;
+      flex-wrap: wrap;
+      .img-wrapper {
+        height: 30rem;
+      }
+    }
+  }
+
+  section.ads {
+    min-height: 72.2vh;
+    position: relative;
+    margin: 0 2rem;
+    img {
+      width: 100%;
+    }
   }
 }

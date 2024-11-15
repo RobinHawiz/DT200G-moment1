@@ -58,6 +58,7 @@ h1 {
   font-size: $h1-font;
   color: $h1-color;
   font-weight: $bold-weight;
+  margin: 7rem 0;
 }
 
 h2 {
@@ -87,7 +88,32 @@ footer {
   @include flex(center, center, column);
   text-align: center;
   p {
-    margin: 0 5.6rem;
+    margin: 2rem 5.6rem;
     font-size: $footer-font;
+  }
+}
+
+// Global styling for tablets
+
+@media screen and (max-width: 834px) {
+  h1 {
+    font-size: calc($h1-font - 0.6rem);
+    margin: 4rem 0;
+  }
+
+  h2 {
+    font-size: calc($h2-font - 0.4rem);
+  }
+}
+
+// Global styling for mobile
+
+@media screen and (max-width: 695px) {
+  h1 {
+    font-size: calc($h1-font - 1rem);
+  }
+
+  h2 {
+    font-size: calc($h2-font - 1rem);
   }
 }
