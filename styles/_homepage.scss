@@ -52,11 +52,9 @@ section.course-sellout {
 section.ads {
   min-height: 72.2vh;
   position: relative;
+  @include flex(center, center, column);
   img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 2rem 0;
   }
 }
 

@@ -33,6 +33,10 @@ p {
   font-size: 1.8rem;
 }
 
+span {
+  font-size: 1.8rem;
+}
+
 section.hero .hero-img {
   height: 46rem;
 }
@@ -257,12 +261,13 @@ section.course-sellout a.search-here:hover {
 section.ads {
   min-height: 72.2vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 section.ads img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 2rem 0;
 }
 
 @media screen and (max-width: 834px) {
